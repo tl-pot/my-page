@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ting Li Quek</title>
+  <meta name="description" content="Ting Li Quek, Premodern Chinese Economic History">
+  <style>
+    :root {
+      --clay: #b9a68c;        /* fired-clay ground */
+      --clay-dark: #8f7b62;
+      --ink: #1f1d1b;         /* rubbing ink */
+      --paper: #e9e1d2;       /* paper showing through the rubbing */
+      --paper-dim: #b8ae9d;
+      --seal: #a3342a;        /* seal-paste red */
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background-color: var(--clay);
+      /* mottled fired-clay surface */
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.35  0 0 0 0 0.27  0 0 0 0 0.18  0 0 0 0.35 0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)'/%3E%3C/svg%3E");
+      color: var(--paper);
+      font-family: Georgia, "Times New Roman", serif;
+      line-height: 1.6;
+    }
+    main {
+      max-width: 46rem;
+      margin: 0 auto;
+      padding: 3rem 1rem;
+    }
+
+    /* A "brick": an ink rubbing with a raised double border */
+    .brick {
+      position: relative;
+      background-color: var(--ink);
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='r'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.55' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.92  0 0 0 0 0.88  0 0 0 0 0.82  0 0 0 -4.5 1.85'/%3E%3C/filter%3E%3Crect width='240' height='240' filter='url(%23r)'/%3E%3C/svg%3E");
+      border: 3px solid var(--paper-dim);
+      outline: 2px solid var(--ink);
+      outline-offset: 5px;
+      padding: 2rem 2rem 1.75rem;
+      margin: 0 0 2.5rem;
+      box-shadow: 0 0 0 9px var(--clay-dark), 0 10px 24px rgba(40, 28, 15, 0.45);
+    }
+    .brick::before {
+      /* inner raised frame, as on the moulded bricks */
+      content: "";
+      position: absolute;
+      inset: 8px;
+      border: 1px solid rgba(233, 225, 210, 0.35);
+      pointer-events: none;
+    }
+
+    .scene { padding: 0.75rem; }
+    .scene svg { display: block; width: 100%; height: auto; }
+
+    h1 {
+      font-size: 2.5rem;
+      font-weight: normal;
+      letter-spacing: 0.04em;
+      margin: 0 0 0.25rem;
+    }
+    .field {
+      font-size: 1.1rem;
+      color: var(--paper-dim);
+      letter-spacing: 0.06em;
+      margin: 0;
+    }
+    .title-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.25rem;
+    }
+    .seal {
+      flex: none;
+      width: 3.6rem;
+      height: 3.6rem;
+      border: 3px solid var(--seal);
+      border-radius: 4px;
+      color: var(--seal);
+      display: grid;
+      place-items: center;
+      font-size: 1.2rem;
+      letter-spacing: 0.05em;
+      transform: rotate(-4deg);
+      background: var(--ink);
+      font-weight: bold;
+    }
+    h2 {
+      font-size: 0.95rem;
+      font-weight: normal;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: var(--paper-dim);
+      margin: 0 0 0.75rem;
+    }
+    p.body { font-size: 1.15rem; margin: 0; }
+
+    footer {
+      text-align: center;
+      color: #3d3125;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 520px) {
+      .brick { padding: 1.5rem 1.25rem; }
+      h1 { font-size: 2rem; }
+      .seal { width: 3rem; height: 3rem; font-size: 1rem; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+
+    <!-- Banner brick: a walled market in the manner of Eastern Han Sichuan market bricks -->
+    <div class="brick scene" aria-hidden="true">
+      <svg viewBox="-12 0 624 390" fill="#e9e1d2" stroke="#e9e1d2" stroke-linecap="round" stroke-linejoin="round">
+        <defs>
+          <!-- a row of shop stalls (lie si) under one long tiled roof -->
+          <g id="stalls">
+            <path d="M0 7 L9 0 H166 L175 7 Z"/>
+            <path d="M0 7 H175" stroke-width="2" fill="none"/>
+            <rect x="5" y="7" width="165" height="16" fill="none" stroke-width="2"/>
+            <path d="M30 7 V23 M55 7 V23 M80 7 V23 M105 7 V23 M130 7 V23 M150 7 V23" stroke-width="2" fill="none"/>
+            <circle cx="42" cy="15" r="2.6" stroke="none"/>
+            <circle cx="92" cy="15" r="2.6" stroke="none"/>
+            <circle cx="140" cy="15" r="2.6" stroke="none"/>
+          </g>
+          <!-- a walking figure -->
+          <g id="person" stroke="none">
+            <circle cx="0" cy="-15" r="4.2"/>
+            <path d="M-5 -10 H5 L8.5 0 H-8.5 Z"/>
+          </g>
+          <g id="carrier" stroke="none">
+            <circle cx="0" cy="-15" r="4.2"/>
+            <path d="M-5 -10 H5 L8.5 0 H-8.5 Z"/>
+            <path d="M-13 -11 L13 -14" stroke="#e9e1d2" stroke-width="2"/>
+            <rect x="-15" y="-11" width="5" height="6"/>
+            <rect x="10" y="-14" width="5" height="6"/>
+          </g>
+          <!-- gatehouse -->
+          <g id="gate">
+            <path d="M-24 -14 L-16 -22 H16 L24 -14 Z"/>
+            <path d="M-17 -14 V14 M17 -14 V14" stroke-width="5" fill="none"/>
+          </g>
+        </defs>
+
+        <!-- outer market wall, broken by four gates -->
+        <g stroke-width="7" fill="none">
+          <path d="M45 45 H278 M322 45 H555"/>
+          <path d="M45 345 H278 M322 345 H555"/>
+          <path d="M45 45 V173 M45 217 V345"/>
+          <path d="M555 45 V173 M555 217 V345"/>
+        </g>
+        <use href="#gate" x="300" y="45"/>
+        <use href="#gate" x="300" y="345"/>
+        <use href="#gate" x="45" y="195" transform="rotate(-90 45 195)"/>
+        <use href="#gate" x="555" y="195" transform="rotate(90 555 195)"/>
+
+        <!-- gate inscriptions -->
+        <g stroke="none" font-family="'Songti SC','STSong','Noto Serif CJK TC','SimSun',serif" font-size="15" text-anchor="middle">
+          <text x="300" y="18">北市門</text>
+          <text x="300" y="384">南市門</text>
+          <text x="6" y="178">西</text><text x="6" y="196">市</text><text x="6" y="214">門</text>
+          <text x="594" y="178">東</text><text x="594" y="196">市</text><text x="594" y="214">門</text>
+        </g>
+
+        <!-- cross streets -->
+        <g stroke-width="1.5" fill="none" opacity="0.6" stroke-dasharray="2 6">
+          <path d="M275 55 V140 M325 55 V140 M275 250 V335 M325 250 V335"/>
+          <path d="M55 170 H240 M55 220 H240 M360 170 H545 M360 220 H545"/>
+        </g>
+
+        <!-- rows of stalls in the four wards -->
+        <use href="#stalls" x="62" y="62"/>
+        <use href="#stalls" x="62" y="97"/>
+        <use href="#stalls" x="62" y="132"/>
+        <use href="#stalls" x="363" y="62"/>
+        <use href="#stalls" x="363" y="97"/>
+        <use href="#stalls" x="363" y="132"/>
+        <use href="#stalls" x="62" y="232"/>
+        <use href="#stalls" x="62" y="267"/>
+        <use href="#stalls" x="62" y="302"/>
+        <use href="#stalls" x="363" y="232"/>
+        <use href="#stalls" x="363" y="267"/>
+        <use href="#stalls" x="363" y="302"/>
+
+        <!-- central market tower (shi lou) with drum -->
+        <g>
+          <path d="M262 238 H338" stroke-width="5" fill="none"/>
+          <rect x="280" y="205" width="40" height="31" fill="none" stroke-width="3"/>
+          <path d="M293 205 V236 M307 205 V236" stroke-width="2" fill="none"/>
+          <path d="M266 206 L278 194 H322 L334 206 Z"/>
+          <rect x="287" y="170" width="26" height="24" fill="none" stroke-width="3"/>
+          <path d="M270 172 L282 159 H318 L330 172 Z"/>
+          <path d="M300 159 V150" stroke-width="2.5" fill="none"/>
+          <ellipse cx="300" cy="143" rx="9" ry="7"/>
+          <path d="M290 132 L297 139 M310 132 L303 139" stroke-width="2" fill="none"/>
+        </g>
+
+        <!-- people coming and going -->
+        <use href="#person" x="300" y="80"/>
+        <use href="#carrier" x="300" y="120"/>
+        <use href="#person" x="292" y="282"/>
+        <use href="#person" x="308" y="312"/>
+        <use href="#carrier" x="90" y="207"/>
+        <use href="#person" x="140" y="207"/>
+        <use href="#person" x="200" y="207"/>
+        <use href="#person" x="400" y="207"/>
+        <use href="#carrier" x="460" y="207"/>
+        <use href="#person" x="515" y="207"/>
+        <use href="#person" x="252" y="262"/>
+        <use href="#person" x="348" y="160"/>
+      </svg>
+    </div>
+
+    <!-- Name brick -->
+    <section class="brick">
+      <div class="title-row">
+        <div>
+          <h1>Ting Li Quek</h1>
+          <p class="field">Premodern Chinese Economic History</p>
+        </div>
+        <div class="seal" aria-hidden="true">TLQ</div>
+      </div>
+    </section>
+
+    <!-- Research brick -->
+    <section class="brick">
+      <h2>Research</h2>
+      <p class="body">I work on the economic history of China from the Han dynasty (202 BCE&ndash;220 CE) to the Song dynasty (960&ndash;1279 CE).</p>
+    </section>
+
+    <footer>&copy; 2026 Ting Li Quek</footer>
+  </main>
+</body>
+</html>
